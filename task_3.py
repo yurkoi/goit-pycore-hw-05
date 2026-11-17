@@ -37,7 +37,10 @@ def load_logs(file_path: str) -> list:
             try:
                 logs.append(parse_log_line(line))
             except ValueError as error:
-                print(f"Рядок {line_number} пропущено: {error}", file=sys.stderr)
+                print(
+                    f"Рядок {line_number} пропущено: {error}",
+                    file=sys.stderr,
+                )
     return logs
 
 
